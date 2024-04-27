@@ -3,6 +3,7 @@ import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextFie
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 export default function Table1() {
     const [open, setOpen] = useState(false);
@@ -62,10 +63,25 @@ export default function Table1() {
         <div>
             <div style={{ display: "flex", alignItems: "center", marginTop: "8%" }}>
                 <h2 className='header-text' style={{ marginRight: "8px", marginLeft: "2%" }}>مواعيد الدوام</h2>
-                <Button style={{ marginTop: "1%" }} variant="outlined" onClick={handleOpen}><AddCircleIcon /></Button>
+                <Button
+                 style={{ 
+                    marginTop: "1%",
+                    color: "#1ec823",
+                    border:" 1px dotted #1ec823",
+                    backgroundColor: "#e6fae6",
+                    marginTop: "1.5%" }}
+                  variant="outlined" onClick={handleOpen}><AddCircleIcon /></Button>
             </div>
             <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
-                <DialogTitle style={{ direction: "rtl", textAlign: "right" }}>إضافة موعد دوام جديد</DialogTitle>
+                <DialogTitle
+                    style={{
+                        marginBottom:"15px" ,
+                        borderBottom: "1px #000000d6 solid",
+                        direction: "rtl", textAlign: "right"
+                    }}>
+                        إضافة موعد دوام جديد
+                        <CancelIcon style={{ position: "absolute", left: "15px", cursor: "pointer" }} onClick={handleClose} />
+                </DialogTitle>
                 <DialogContent style={{ direction: "rtl" }}>
                     <div className='container'>
                         <div className='row'>
@@ -137,9 +153,31 @@ export default function Table1() {
                         </div>
                     </div>
                 </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClose}>إلغاء</Button>
-                    <Button onClick={handleSave}>حفظ</Button>
+                <DialogActions
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                        marginBottom: "15px"
+                    }}
+                >
+                    <div>
+                        <Button
+                            sx={{
+                                color: "#fff",
+                                backgroundColor: " #22a522"
+                            }}
+                            onClick={handleSave}>حفظ</Button>
+                    </div>
+
+                    <div>
+                        <Button
+                            sx={{
+                                backgroundColor: "#e03d3d",
+                                color: "#fff"
+                            }}
+                            onClick={handleClose}>إلغاء</Button>
+                    </div>
+
                 </DialogActions>
             </Dialog>
             <Box sx={{ marginTop: "16px" }}>
@@ -158,7 +196,7 @@ export default function Table1() {
                                 <TableCell>إزالة</TableCell>
                             </TableRow>
                         </TableHead>
-                        <TableBody style={{backgroundColor:"#fff"}}>
+                        <TableBody style={{ backgroundColor: "#fff" }}>
                             {dataTable.map((data, index) => (
                                 <TableRow key={index}>
                                     <TableCell>{index + 1}</TableCell>
@@ -180,6 +218,6 @@ export default function Table1() {
                     </Table>
                 </TableContainer>
             </Box>
-        </div>
+        </div >
     );
 }
