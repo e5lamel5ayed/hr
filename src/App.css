@@ -1,7 +1,42 @@
-.App {
-  text-align: center;
+body {
+  background-color: #f3f7fd !important;
+
 }
 
+
+.header-text{
+  font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: #1c1c1c;
+    text-align: start;
+    unicode-bidi: plaintext;
+    word-break: break-word;
+    margin-left: -14px;
+    margin-top: 20px;
+}
+
+.text-decoration:hover{
+  text-decoration: none !important;
+}
+
+.label-edit{
+  display: flex ;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  color: #000 !important;
+}
+.thead-color{
+  background-color: #caedff;
+  font-size: 20px !important;
+}
+
+
+
+
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +70,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
