@@ -187,7 +187,6 @@ export default function Table1() {
                     <Table>
                         <TableHead className='thead-color'>
                             <TableRow >
-                                <TableCell >رقم</TableCell>
                                 <TableCell>العنوان</TableCell>
                                 <TableCell>الفترة</TableCell>
                                 <TableCell>من</TableCell>
@@ -201,7 +200,6 @@ export default function Table1() {
                         <TableBody style={{ backgroundColor: "#fff" }}>
                             {dataTable.map((data, index) => (
                                 <TableRow key={index}>
-                                    <TableCell>{index + 1}</TableCell>
                                     <TableCell>{data.address}</TableCell>
                                     <TableCell>{data.period}</TableCell>
                                     <TableCell>{data.startHour}</TableCell>

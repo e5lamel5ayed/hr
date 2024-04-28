@@ -5,6 +5,9 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CancelIcon from '@mui/icons-material/Cancel';
 import BusinessRules from './AddWorkingDays/BusinessRules';
+import Employees from './AddWorkingDays/Employees';
+import Entities from './AddWorkingDays/Entities';
+import Last from './AddWorkingDays/Last';
 
 export default function Table3() {
     const [open, setOpen] = useState(false);
@@ -125,7 +128,7 @@ export default function Table3() {
     return (
         <div>
             <div style={{ display: "flex", alignItems: "center", marginTop: "8%" }}>
-                <h2 className='header-text' style={{ marginRight: "8px", marginLeft: "2%" }}>العطلات </h2>
+                <h2 className='header-text' style={{ marginRight: "8px", marginLeft: "2%" }}>خطط الدوام </h2>
                 <Button
                     style={{
                         marginTop: "1%",
@@ -169,17 +172,17 @@ export default function Table3() {
                     )}
                     {tabValue === 1 && (
                         <div>
-                            {/* Content for "الجهات" tab */}
+                           <Employees/>
                         </div>
                     )}
                     {tabValue === 2 && (
                         <div>
-                            {/* Content for "الموظفين" tab */}
+                            <Entities/>
                         </div>
                     )}
                     {tabValue === 3 && (
                         <div>
-                            {/* Content for "الاعدادات العامة" tab */}
+                            <Last/>
                         </div>
                     )}
                 </DialogContent>
