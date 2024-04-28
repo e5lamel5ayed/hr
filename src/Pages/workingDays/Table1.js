@@ -91,6 +91,7 @@ export default function Table1() {
                                     margin="dense"
                                     name="address"
                                     type="text"
+                                    label="العنوان"
                                     fullWidth
                                     value={formData.address}
                                     onChange={handleInputChange}
@@ -121,6 +122,7 @@ export default function Table1() {
                                     margin="dense"
                                     name="numberOfHours"
                                     type="number"
+                                    label="عدد الساعات"
                                     fullWidth
                                     value={formData.numberOfHours}
                                     onChange={handleInputChange}
