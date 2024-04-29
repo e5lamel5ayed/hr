@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../../Components/Navbar';
 import WorkingDays from './WorkingDays';
 
 export default function Home2() {

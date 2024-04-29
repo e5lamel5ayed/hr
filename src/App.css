@@ -59,7 +59,27 @@ body {
   width: 10% !important;
   height: max-content !important;
 }
+.btn-color{
+  background-color: #1ec823 !important;
+  font-size: 20px;
+}
 
+.upload-exel{
+  background-color: #2E90C1 !important;
+  color: #fff !important;
+}
+
+.review-tab-edit{
+  background-image: linear-gradient(0deg, #51c0f6, rgba(81, 192, 246, 0));
+  background-color: #1ba4e1;
+  color: #fff;
+  border-radius: 5px;
+  padding: 13px 33px 0px 56px;
+}
+.accept-edit{
+  color: #fff !important;
+  background-color: #1ba4e1 !important;
+}
 /*
 .App-logo {
   height: 40vmin;

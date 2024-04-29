@@ -204,20 +204,20 @@ function ResponsiveAppBar() {
                         </div>
 
                         <div>
-                            
-                                <Button
-                                    id="schedule-button"
-                                    aria-controls={openSchedule ? 'schedule-menu' : undefined}
-                                    aria-haspopup="true"
-                                    aria-expanded={openSchedule ? 'true' : undefined}
-                                    sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
-                                    onClick={handleOpenScheduleMenu}
-                                >
-                                    <TimerIcon sx={{ color: "#64899e" }} />
-                                    مواعيد الدوام
-                                    <KeyboardArrowDownIcon />
-                                </Button>
-                            
+
+                            <Button
+                                id="schedule-button"
+                                aria-controls={openSchedule ? 'schedule-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={openSchedule ? 'true' : undefined}
+                                sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
+                                onClick={handleOpenScheduleMenu}
+                            >
+                                <TimerIcon sx={{ color: "#64899e" }} />
+                                مواعيد الدوام
+                                <KeyboardArrowDownIcon />
+                            </Button>
+
                             <Menu
                                 id="schedule-menu"
                                 anchorEl={anchorElSchedule}
@@ -228,22 +228,30 @@ function ResponsiveAppBar() {
                                 }}
                             >
                                 <Link to="/Home2" className='text-decoration'>
-                                <MenuItem onClick={handleCloseScheduleMenu}>مواعيد الدوام</MenuItem>
+                                    <MenuItem onClick={handleCloseScheduleMenu}>مواعيد الدوام</MenuItem>
                                 </Link>
-                                
-                                <MenuItem onClick={handleCloseScheduleMenu}>تعديل موعد الحضور</MenuItem>
-                                <MenuItem onClick={handleCloseScheduleMenu}>الحركه المعلقه</MenuItem>
+
+                                <Link to="/AttendanceDate" className='text-decoration'>
+                                    <MenuItem onClick={handleCloseScheduleMenu}>تعديل موعد الحضور</MenuItem>
+                                </Link>
+
+                                <Link to="/PendingMovemente" className='text-decoration'>
+                                    <MenuItem onClick={handleCloseScheduleMenu}>الحركه المعلقه</MenuItem>
+                                </Link>
+
                             </Menu>
                         </div>
 
-                        <Button
-                            key=""
-                            onClick={handleCloseNavMenu}
-                            sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
-                        >
-                            <PlaylistAddCheckIcon sx={{ color: "#64899e" }} />
-                            طلبات التسجيل
-                        </Button>
+                        <Link to="/RegistrationRequests" className='text-decoration'>
+                            <Button
+                                key=""
+                                onClick={handleCloseNavMenu}
+                                sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
+                            >
+                                <PlaylistAddCheckIcon sx={{ color: "#64899e" }} />
+                                طلبات التسجيل
+                            </Button>
+                        </Link>
 
                         <Button
                             key=""

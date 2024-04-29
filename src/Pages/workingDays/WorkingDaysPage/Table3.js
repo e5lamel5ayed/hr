@@ -1,5 +1,6 @@
+/* eslint-disable no-dupe-keys */
 import React, { useState } from 'react';
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, FormControl, FormLabel, RadioGroup, Radio, FormControlLabel, Checkbox, MenuItem, Select, InputLabel, Tab, Tabs } from '@mui/material';
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Tab, Tabs } from '@mui/material';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -143,7 +144,7 @@ export default function Table3() {
                 <DialogTitle
                     style={{
                         borderBottom: "1px #000000d6 solid",
-                        direction: "rtl", textAlign: "right",fontSize:"28px",fontWeight:"500"
+                        direction: "rtl", textAlign: "right", fontSize: "28px", fontWeight: "500"
                     }}>
                     اضافة خطة دوام
                     <CancelIcon style={{ position: "absolute", left: "15px", cursor: "pointer" }} onClick={handleClose} />
@@ -152,14 +153,14 @@ export default function Table3() {
                     style={{
                         direction: "rtl", textAlign: "right",
                         backgroundColor: "#caedff",
-                        color: "#000",padding:".5%"
+                        color: "#000", padding: ".5%"
                     }}>
 
                     <Tabs value={tabValue} onChange={handleTabChange}>
-                        <Tab style={{fontSize:"20px",fontWeight:"600"}}  label="قواعد العمل" />
-                        <Tab  style={{fontSize:"20px",fontWeight:"600"}}  label="الموظفين" />
-                        <Tab style={{fontSize:"20px",fontWeight:"600"}}    label="الجهات" />
-                        <Tab  style={{fontSize:"20px",fontWeight:"600"}}  label="قواعد العمل " />
+                        <Tab style={{ fontSize: "20px", fontWeight: "600" }} label="قواعد العمل" />
+                        <Tab style={{ fontSize: "20px", fontWeight: "600" }} label="الموظفين" />
+                        <Tab style={{ fontSize: "20px", fontWeight: "600" }} label="الجهات" />
+                        <Tab style={{ fontSize: "20px", fontWeight: "600" }} label="قواعد العمل " />
                     </Tabs>
                 </div>
 
@@ -172,17 +173,17 @@ export default function Table3() {
                     )}
                     {tabValue === 1 && (
                         <div>
-                           <Employees/>
+                            <Employees />
                         </div>
                     )}
                     {tabValue === 2 && (
                         <div>
-                            <Entities/>
+                            <Entities />
                         </div>
                     )}
                     {tabValue === 3 && (
                         <div>
-                            <Last/>
+                            <Last />
                         </div>
                     )}
                 </DialogContent>
