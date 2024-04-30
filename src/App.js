@@ -6,6 +6,9 @@ import Home2 from './Pages/workingDays/WorkingDaysPage/Home2';
 import AttendanceDate from './Pages/workingDays/ModifyAttendanceDate/AttendanceDate';
 import PendingMovemente from './Pages/workingDays/PendingMovements/PendingMovemente';
 import RegistrationRequests from './Pages/RegistrationRequests/RegistrationRequests';
+import Departures from './Pages/Departures/Departures';
+import Entities from './Pages/AdministrativeStructure/Entities/Entities';
+import Employees from './Pages/AdministrativeStructure/Employees/Employees';
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
       <Route path='/AttendanceDate' exact element={<AttendanceDate/>} />
       <Route path='/PendingMovemente' exact element={<PendingMovemente/>} />
       <Route path='/RegistrationRequests' exact element={<RegistrationRequests/>} />
+      <Route path='/Departures' exact element={<Departures/>} />
+      <Route path='/Entities' exact element={<Entities/>} />
+      <Route path='/Employees' exact element={<Employees/>} />
       </Routes>
       </BrowserRouter>
       

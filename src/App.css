@@ -80,18 +80,20 @@ body {
   color: #fff !important;
   background-color: #1ba4e1 !important;
 }
-/*
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
+.AddIcon{
+  border-radius: 46%;
+  background-color: #1ba4e16e;
+  color: green;
+  border: none;
+  padding-bottom: 5px;
+}
+/*
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

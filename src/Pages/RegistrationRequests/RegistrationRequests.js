@@ -99,7 +99,7 @@ export default function RegistrationRequests() {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                        
+
                             <TableRow>
                                 <TableCell>John</TableCell>
                                 <TableCell>Doe</TableCell>
@@ -243,12 +243,15 @@ export default function RegistrationRequests() {
                         {selectedTab === 1 && (
                             <Box mt={4} mb={50}>
                                 <div className='d-flex' >
-                                    <div class="input-group-append">
-                                        <label class="input-group-text upload-exel" for="inputGroupSelect02">رفع ملف الاكسل </label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text upload-exel" id="inputGroupFileAddon01">رفع</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01"/>
+                                                <label class="custom-file-label" for="inputGroupFile01">رفع ملف اكسل</label>
+                                        </div>
                                     </div>
-
-                                    <TextField type='file' className=''>
-                                    </TextField>
                                 </div>
 
                             </Box>
@@ -271,7 +274,7 @@ export default function RegistrationRequests() {
                     <DialogActions>
                         <div>
 
-                        <Button className='accept-edit' onClick={handleReviewRequest} color="primary">الموافقه على الطلب</Button>
+                            <Button className='accept-edit' onClick={handleReviewRequest} color="primary">الموافقه على الطلب</Button>
                         </div>
                     </DialogActions>
                 </Dialog>
