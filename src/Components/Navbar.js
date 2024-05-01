@@ -198,8 +198,8 @@ function ResponsiveAppBar() {
                                     'aria-labelledby': 'reports-button',
                                 }}
                             >
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseReportsMenu}>التقارير</MenuItem>
-                                <MenuItem style={{direction:"rtl"}} onClick={handleCloseReportsMenu}>التقارير المصدره </MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير المصدره </MenuItem>
                             </Menu>
                         </div>
 
@@ -228,15 +228,15 @@ function ResponsiveAppBar() {
                                 }}
                             >
                                 <Link to="/Home2" className='text-decoration'>
-                                    <MenuItem style={{direction:"rtl"}}  onClick={handleCloseScheduleMenu}>مواعيد الدوام</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseScheduleMenu}>مواعيد الدوام</MenuItem>
                                 </Link>
 
                                 <Link to="/AttendanceDate" className='text-decoration'>
-                                    <MenuItem style={{direction:"rtl"}}  onClick={handleCloseScheduleMenu}>تعديل موعد الحضور</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseScheduleMenu}>تعديل موعد الحضور</MenuItem>
                                 </Link>
 
                                 <Link to="/PendingMovemente" className='text-decoration'>
-                                    <MenuItem style={{direction:"rtl"}}  onClick={handleCloseScheduleMenu}>الحركه المعلقه</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseScheduleMenu}>الحركه المعلقه</MenuItem>
                                 </Link>
 
                             </Menu>
@@ -289,11 +289,11 @@ function ResponsiveAppBar() {
                             >
                                 <Link to="/Entities" className='text-decoration'>
 
-                                    <MenuItem style={{direction:"rtl"}} onClick={handleCloseStructureMenu}>الجهات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseStructureMenu}>الجهات</MenuItem>
                                 </Link>
                                 <Link to="/Employees" className='text-decoration'>
 
-                                    <MenuItem style={{direction:"rtl"}}  onClick={handleCloseStructureMenu}>الموظفين</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseStructureMenu}>الموظفين</MenuItem>
                                 </Link>
                             </Menu>
                         </div>
@@ -320,16 +320,19 @@ function ResponsiveAppBar() {
                                     'aria-labelledby': 'settings-button',
                                 }}
                             >
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>المواقع</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>الأسئله</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>الجمل الصوتيه</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
-                                <MenuItem style={{direction:"rtl"}}  onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
+                                <Link to="/Websites" className='text-decoration'>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>المواقع</MenuItem>
+                                </Link>
+
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الأسئله</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الجمل الصوتيه</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
                             </Menu>
                         </div>
                     </Box>

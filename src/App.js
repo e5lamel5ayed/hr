@@ -9,6 +9,7 @@ import RegistrationRequests from './Pages/RegistrationRequests/RegistrationReque
 import Departures from './Pages/Departures/Departures';
 import Entities from './Pages/AdministrativeStructure/Entities/Entities';
 import Employees from './Pages/AdministrativeStructure/Employees/Employees';
+import Websites from './Pages/AccountSetting/Websites/Websites';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Route path='/Departures' exact element={<Departures/>} />
       <Route path='/Entities' exact element={<Entities/>} />
       <Route path='/Employees' exact element={<Employees/>} />
+      <Route path='/Websites' exact element={<Websites/>} />
       </Routes>
       </BrowserRouter>
       
