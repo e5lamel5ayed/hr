@@ -4,43 +4,44 @@ body {
 }
 
 
-.header-text{
+.header-text {
   font-size: 24px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    color: #1c1c1c;
-    text-align: start;
-    unicode-bidi: plaintext;
-    word-break: break-word;
-    margin-left: -14px;
-    margin-top: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  color: #1c1c1c;
+  text-align: start;
+  unicode-bidi: plaintext;
+  word-break: break-word;
+  margin-left: -14px;
+  margin-top: 20px;
 }
 
-.text-decoration:hover{
+.text-decoration:hover {
   text-decoration: none !important;
 }
 
-.label-edit{
-  display: flex ;
+.label-edit {
+  display: flex;
   font-size: 20px !important;
   font-weight: 500 !important;
   color: #000 !important;
 }
-.thead-color{
+
+.thead-color {
   background-color: #caedff;
   font-size: 20px !important;
 }
 
 
-.row-edit{
+.row-edit {
   display: flex !important;
   justify-content: center;
   align-items: end;
 }
 
-.messege-edit{
+.messege-edit {
   display: flex;
   background-color: #caedff;
   padding: 6% 6% 3% 4%;
@@ -51,37 +52,39 @@ body {
   font-weight: 500;
 }
 
-.add-edit{  
-    margin-top: 6.5% !important;
+.add-edit {
+  margin-top: 6.5% !important;
   color: rgb(30, 200, 35) !important;
   border: 1px dotted rgb(30, 200, 35) !important;
   background-color: rgb(230, 250, 230) !important;
   width: 10% !important;
   height: max-content !important;
 }
-.btn-color{
+
+.btn-color {
   background-color: #1ec823 !important;
   font-size: 20px;
 }
 
-.upload-exel{
+.upload-exel {
   background-color: #2E90C1 !important;
   color: #fff !important;
 }
 
-.review-tab-edit{
+.review-tab-edit {
   background-image: linear-gradient(0deg, #51c0f6, rgba(81, 192, 246, 0));
   background-color: #1ba4e1;
   color: #fff;
   border-radius: 5px;
   padding: 13px 33px 0px 56px;
 }
-.accept-edit{
+
+.accept-edit {
   color: #fff !important;
   background-color: #1ba4e1 !important;
 }
 
-.AddIcon{
+.AddIcon {
   border-radius: 46%;
   background-color: #1ba4e16e;
   color: green;
@@ -105,4 +108,9 @@ body {
 
 .additional_h5 {
   margin-top: 5px;
+}
+
+.search {
+  display: flex !important;
+  justify-content: end !important;
 }

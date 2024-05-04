@@ -10,6 +10,9 @@ import Departures from './Pages/Departures/Departures';
 import Entities from './Pages/AdministrativeStructure/Entities/Entities';
 import Employees from './Pages/AdministrativeStructure/Employees/Employees';
 import Websites from './Pages/AccountSetting/Websites/Websites';
+import Questions from './Pages/AccountSetting/Questions/Question';
+import AudioSentences from './Pages/AccountSetting/AudioSentences/AudioSentences';
+import ReviewMovements from './Pages/AccountSetting/ReviewMovements/ReviewMovements';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
       <Route path='/Entities' exact element={<Entities/>} />
       <Route path='/Employees' exact element={<Employees/>} />
       <Route path='/Websites' exact element={<Websites/>} />
+      <Route path='/Questions' exact element={<Questions/>} />
+      <Route path='/AudioSentences' exact element={<AudioSentences/>} />
+      <Route path='/ReviewMovements' exact element={<ReviewMovements/>} />
       </Routes>
       </BrowserRouter>
       

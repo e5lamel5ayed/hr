@@ -323,16 +323,24 @@ function ResponsiveAppBar() {
                                 <Link to="/Websites" className='text-decoration'>
                                     <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>المواقع</MenuItem>
                                 </Link>
-
+                                <Link to="/Questions" className='text-decoration'>
                                     <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الأسئله</MenuItem>
+                                </Link>
+
+                                <Link to="/AudioSentences" className='text-decoration'>
                                     <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الجمل الصوتيه</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
-                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
+                                </Link>
+
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
+
+                                <Link to="/ReviewMovements" className='text-decoration'>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
+                                </Link>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
                             </Menu>
                         </div>
                     </Box>
