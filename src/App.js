@@ -13,6 +13,9 @@ import Websites from './Pages/AccountSetting/Websites/Websites';
 import Questions from './Pages/AccountSetting/Questions/Question';
 import AudioSentences from './Pages/AccountSetting/AudioSentences/AudioSentences';
 import ReviewMovements from './Pages/AccountSetting/ReviewMovements/ReviewMovements';
+import Validities from './Pages/AccountSetting/Validities/Validities';
+import AlertsManagement from './Pages/AccountSetting/AlertsManagement/AlertsManagement';
+import ChangePassword from './Pages/AccountSetting/ChangePassword/ChangePassword';
 
 function App() {
   return (
@@ -31,6 +34,9 @@ function App() {
       <Route path='/Questions' exact element={<Questions/>} />
       <Route path='/AudioSentences' exact element={<AudioSentences/>} />
       <Route path='/ReviewMovements' exact element={<ReviewMovements/>} />
+      <Route path='/Validities' exact element={<Validities/>} />
+      <Route path='/AlertsManagement' exact element={<AlertsManagement/>} />
+      <Route path='/ChangePassword' exact element={<ChangePassword/>} />
       </Routes>
       </BrowserRouter>
       

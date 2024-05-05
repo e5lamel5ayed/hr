@@ -82,6 +82,10 @@ function ResponsiveAppBar() {
         setAnchorElSettings(null);
     };
 
+
+
+
+
     return (
         <AppBar position="fixed" sx={{ top: 0, zIndex: 1100, backgroundColor: "#f3f7fd", color: "#7E8C93" }}>
             <Container maxWidth="xl">
@@ -331,14 +335,25 @@ function ResponsiveAppBar() {
                                     <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الجمل الصوتيه</MenuItem>
                                 </Link>
 
+                                <Link to="/Validities" className='text-decoration'>
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
+                                </Link>
 
                                 <Link to="/ReviewMovements" className='text-decoration'>
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
                                 </Link>
+
+                                <Link to="/AlertsManagement" className='text-decoration'>
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
+                                </Link>
+
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
+
+                                <Link to="/ChangePassword" className='text-decoration'>
+
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
+                                </Link>
+
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
                                 <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
                             </Menu>

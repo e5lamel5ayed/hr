@@ -114,3 +114,9 @@ body {
   display: flex !important;
   justify-content: end !important;
 }
+.pass{
+  background-color: aliceblue;
+  padding: 2px 7px;
+  margin: 5px 5px;
+  border-radius: 13px;
+}
