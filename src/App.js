@@ -16,6 +16,8 @@ import ReviewMovements from './Pages/AccountSetting/ReviewMovements/ReviewMoveme
 import Validities from './Pages/AccountSetting/Validities/Validities';
 import AlertsManagement from './Pages/AccountSetting/AlertsManagement/AlertsManagement';
 import ChangePassword from './Pages/AccountSetting/ChangePassword/ChangePassword';
+import ChangeAccountInformation from './Pages/AccountSetting/ChangeAccountInformation/ChangeAccountInformation';
+import DeviceInformation from './Pages/AccountSetting/DeviceInformation/DeviceInformation';
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
       <Route path='/Validities' exact element={<Validities/>} />
       <Route path='/AlertsManagement' exact element={<AlertsManagement/>} />
       <Route path='/ChangePassword' exact element={<ChangePassword/>} />
+      <Route path='/ChangeAccountInformation' exact element={<ChangeAccountInformation/>} />
+      <Route path='/DeviceInformation' exact element={<DeviceInformation/>} />
       </Routes>
       </BrowserRouter>
       

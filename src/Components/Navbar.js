@@ -83,6 +83,16 @@ function ResponsiveAppBar() {
     };
 
 
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
 
 
 
@@ -336,26 +346,57 @@ function ResponsiveAppBar() {
                                 </Link>
 
                                 <Link to="/Validities" className='text-decoration'>
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>الصلاحيات</MenuItem>
                                 </Link>
 
                                 <Link to="/ReviewMovements" className='text-decoration'>
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>مراجعه الحركات المرفوضه</MenuItem>
                                 </Link>
 
                                 <Link to="/AlertsManagement" className='text-decoration'>
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>اداره التنبيهات</MenuItem>
                                 </Link>
 
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
+                                <Link to="/ChangeAccountInformation" className='text-decoration'>
+
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير معلومات الحساب</MenuItem>
+                                </Link>
 
                                 <Link to="/ChangePassword" className='text-decoration'>
 
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغير كلمة المرور</MenuItem>
                                 </Link>
 
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>تغيير لغه التنبيهات</MenuItem>
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
+                                {/* <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}> */}
+                                <div style={{direction:"rtl",color:"#007bff",marginRight:"6px"}}>
+
+                                    <Button
+                                        aria-controls="language-menu"
+                                        aria-haspopup="true"
+                                        onClick={handleClick}
+                                        color="inherit"
+                                        style={{ display: "flex" }}
+                                    >
+                                        تغير لغة التنبيهات
+                                    </Button>
+                                    <Menu
+                                        id="language-menu"
+                                        anchorEl={anchorEl}
+                                        open={Boolean(anchorEl)}
+                                        onClose={handleClose}
+                                    >
+                                        <MenuItem onClick={handleClose}>عربي</MenuItem>
+                                        <MenuItem onClick={handleClose}>English</MenuItem>
+                                    </Menu>
+                                </div>
+
+                                {/* </MenuItem> */}
+
+
+                                <Link to="/DeviceInformation" className='text-decoration'>
+
+                                    <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
+                                </Link>
                             </Menu>
                         </div>
                     </Box>

@@ -14,8 +14,9 @@ export default function home() {
     <div style={{ direction: "rtl" , marginBottom:"50px"}}>
       <Navbar />
       <Box sx={{ width: "90%", m: "auto" }}>
+      <Box sx={{ marginTop: "8%" }}/>
 
-        <div style={{marginTop:"8%"}}>
+        <div>
           <h2 className='header-text'>لوحه الاداء</h2>
         </div>
         <Search />
