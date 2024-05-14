@@ -178,7 +178,7 @@ function ResponsiveAppBar() {
 
 
 
-                        <Link to="/" className='text-decoration'>
+                        <Link to="/HomePage" className='text-decoration'>
 
                             <Button
                                 key=""
