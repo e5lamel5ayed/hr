@@ -1,46 +1,58 @@
-// Login.js
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
-  const [inputValue, setInputValue] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [linkEnabled, setLinkEnabled] = useState(false);
 
-  const handleChange = (e) => {
+  const handleUsernameChange = (e) => {
     const { value } = e.target;
-    setInputValue(value);
+    setUsername(value);
+    checkInputValues(value, password);
+  };
 
-    // التحقق مما إذا كانت الحقول فارغة أو لا
-    if (value.trim() !== '') {
-      setLinkEnabled(true); // تمكين الرابط
+
+  const checkInputValues = (username, password) => {
+    // Enable the link if either username or password is not empty
+    if (username.trim() !== '' || password.trim() !== '') {
+      setLinkEnabled(true); // Enable the link
     } else {
-      setLinkEnabled(false); // تعطيل الرابط
+      setLinkEnabled(false); // Disable the link
     }
   };
 
   return (
     <div className='all-login'>
-      <div className='container'>
-        <div className='row form-edit'>
-          <div className='col-md-6 login-edit'>
-            <h3 className='text-center mb-4'>تسجيل الدخول</h3>
-            <form>
-              <div class="form-group">
-                <label className='d-flex' for="exampleInputEmail1">رمز الحساب</label>
-                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value={inputValue} onChange={handleChange} />
-              </div>
-              <div>
-                {/* تعطيل الرابط عندما تكون الحقول فارغة */}
-                {linkEnabled ? (
-                  <Link to="/Login2" className='text-decoration'>
-                    <button type="submit" class="btn btn-primary btn-block text-center mb-2">التالي</button>
-                  </Link>
-                ) : (
-                  <button type="submit" class="btn btn-primary btn-block text-center mb-2" disabled>التالي</button>
-                )}
-              </div>
-            </form>
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='col-md-6'>
+            <img src='\images\Login.jpg' style={{ width: "100%", height: "90%" }} alt="Login" />
+          </div>
+          
+          <div className='col-md-6' style={{ height: "100vh", backgroundColor: "#fff" , display:"flex",alignItems:"center"}}>
+            <div className='col-md-8 ml-auto mr-auto login-edit'>
+              <h3 className='text-center mb-4' style={{fontWeight: "600"}}>تسجيل الدخول</h3>
+              <form>
+                <div className="form-group">
+                  <label className='d-flex' htmlFor="username">رمز الحساب</label>
+                  <input type="text" className="form-control" id="username" value={username} onChange={handleUsernameChange} />
+                </div>
+                
+                
+                
+                <div>
+                  {/* Disable the link when both fields are empty */}
+                  {linkEnabled ? (
+                    <Link to="/Login2" className='text-decoration'>
+                      <button type="button" className="btn btn-primary btn-block text-center mb-2">دخول</button>
+                    </Link>
+                  ) : (
+                    <button type="button" className="btn btn-primary btn-block text-center mb-2" disabled>دخول</button>
+                  )}
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

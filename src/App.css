@@ -134,15 +134,8 @@ body {
 
 }
 
-.form-edit{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15% ;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+
 .login-edit{
   background-color: #fff;
   padding: 30px;
@@ -150,13 +143,10 @@ body {
 }
 
 .all-login{
-  background-image: url("https://admin.availo.app/mainBg.e7770f3f5b56da3230b7.png");
-  background-repeat: no-repeat;
-  background-position: top right;
-  /* padding: 35px 35%; */
+
   text-align: center;
   height: 100vh;
   background-size: 72% 100%;
   overflow-y: auto;
-  background-color: rebeccapurple;
+  background-color: #f7f7f7;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -100,7 +101,7 @@ function ResponsiveAppBar() {
         <AppBar position="fixed" sx={{ top: 0, zIndex: 1100, backgroundColor: "#f3f7fd", color: "#7E8C93" }}>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+                    {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
                     <Typography
                         variant="h6"
                         noWrap
@@ -116,7 +117,14 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        <img
+                            style={{
+                                width: "100 %",
+                                height: "45px",
+                                marginLeft: "16px",
+
+                        }}
+                        src='\images\logo.png'/>
                     </Typography>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -172,7 +180,7 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        LOGO
+                        <img src='\images\logo.png' />
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
@@ -190,32 +198,6 @@ function ResponsiveAppBar() {
                         </Link>
 
 
-                        <div>
-                            <Button
-                                id="reports-button"
-                                aria-controls={openReports ? 'reports-menu' : undefined}
-                                aria-haspopup="true"
-                                aria-expanded={openReports ? 'true' : undefined}
-                                sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
-                                onClick={handleOpenReportsMenu}
-                            >
-                                <AssessmentIcon sx={{ color: "#64899e" }} />
-                                التقارير
-                                <KeyboardArrowDownIcon />
-                            </Button>
-                            <Menu
-                                id="reports-menu"
-                                anchorEl={anchorElReports}
-                                open={openReports}
-                                onClose={handleCloseReportsMenu}
-                                MenuListProps={{
-                                    'aria-labelledby': 'reports-button',
-                                }}
-                            >
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير</MenuItem>
-                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير المصدره </MenuItem>
-                            </Menu>
-                        </div>
 
                         <div>
 
@@ -368,7 +350,7 @@ function ResponsiveAppBar() {
                                 </Link>
 
                                 {/* <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}> */}
-                                <div style={{direction:"rtl",color:"#007bff",marginRight:"6px"}}>
+                                <div style={{ direction: "rtl", color: "#007bff", marginRight: "6px" }}>
 
                                     <Button
                                         aria-controls="language-menu"
@@ -397,8 +379,39 @@ function ResponsiveAppBar() {
 
                                     <MenuItem style={{ direction: "rtl" }} onClick={handleCloseSettingsMenu}>معلومات الاجهزه</MenuItem>
                                 </Link>
+
                             </Menu>
                         </div>
+
+
+                        <div>
+                            <Button
+                                id="reports-button"
+                                aria-controls={openReports ? 'reports-menu' : undefined}
+                                aria-haspopup="true"
+                                aria-expanded={openReports ? 'true' : undefined}
+                                sx={{ fontSize: '20px', fontWeight: '700', my: 0, mx: 1, color: '#7E8C93', display: 'flex' }}
+                                onClick={handleOpenReportsMenu}
+                            >
+                                <AssessmentIcon sx={{ color: "#64899e" }} />
+                                التقارير
+                                <KeyboardArrowDownIcon />
+                            </Button>
+                            <Menu
+                                id="reports-menu"
+                                anchorEl={anchorElReports}
+                                open={openReports}
+                                onClose={handleCloseReportsMenu}
+                                MenuListProps={{
+                                    'aria-labelledby': 'reports-button',
+                                }}
+                            >
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير</MenuItem>
+                                <MenuItem style={{ direction: "rtl" }} onClick={handleCloseReportsMenu}>التقارير المصدره </MenuItem>
+                            </Menu>
+                        </div>
+
+
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
